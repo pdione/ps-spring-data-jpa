@@ -70,7 +70,7 @@ public class SpeakerTest {
     @Test
     public void testJpaIn() throws Exception {
         List<String> companies = new ArrayList<>();
-        companies.add("National Bank");
+        companies.add("National Bank");
         companies.add("Contoso");
         List<Speaker> speakers = repository.findByCompanyIn(companies);
         assertTrue(speakers.size() > 0);
@@ -78,7 +78,7 @@ public class SpeakerTest {
 
     @Test
     public void testJpaIgnoreCase() throws Exception {
-        List<Speaker> speakers = repository.findByCompanyIgnoreCase("national bank");
+        List<Speaker> speakers = repository.findByCompanyIgnoreCase("national bank");
         assertTrue(speakers.size() > 0);
     }
 
